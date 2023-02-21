@@ -81,4 +81,29 @@ public class Menu {
 
     }
 
+    public int preguntarTipo() {
+        System.out.println("||==========================================||");
+        System.out.println("||    Elige un tipo para la obra.           ||");
+        System.out.println("||                                          ||");
+        System.out.println("||    1 --> Pictorica.                      ||");
+        System.out.println("||    2 --> Escultura .                     ||");
+        System.out.println("||==========================================||");
+        int obras = leer.nextInt();
+        return obras;
+    }
+
+    public int menuParaModificarObra() {
+        System.out.println("¿Que desea modificar?");
+        System.out.println("(1)Nombre de la obra ");
+        System.out.println("(2)Autor");
+        System.out.println("(3)Tipo");
+        System.out.println("(4)Precio");
+        System.out.println("(5)Altura");
+        System.out.println("(6)Peso ");
+        System.out.println("(7)Piezas");
+        System.out.println("(8)Descripción");
+        System.out.println("(0)Atras");
+        int obras = leer.nextInt();
+        return obras;
+    }
 }
