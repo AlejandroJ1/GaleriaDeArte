@@ -10,7 +10,7 @@ public class Galeria {
         private Menu menu = new Menu();
         private ObraDeArte[] obras = new ObraDeArte[5];
 
-        public Galeria(){
+        public Galeria() {
 
         }
 
@@ -100,6 +100,15 @@ public class Galeria {
                 System.out.println("La obra de arte se ha dado de alta correctamente.");
         }
 
+        public ObraDeArte buscarObra(ObraDeArte[] buscarObra) {
+
+                System.out.println("||==========================================||");
+                System.out.println("||    Introduzca el ID de la obra.          ||");
+                System.out.println("||==========================================||");
+                int indice = leer.nextInt();
+                return buscarObra[indice - 1];
+        }
+
         public void modificarObrasDeArte(ObraDeArte caracteristicas) {
                 int seleccionar;
                 boolean finalizar = false;
@@ -172,7 +181,20 @@ public class Galeria {
                 }
 
         }
-        
+
+        public void visualizarObra(ObraDeArte visualizarUnaObra) {
+                System.out.println("||                 -=>OBRA Nº " + visualizarUnaObra.getId() + "<=-");
+                System.out.println("|| Nombre: " + visualizarUnaObra.getNombre());
+                System.out.println("|| Autor: " + visualizarUnaObra.getAutor());
+                System.out.println("|| Precio(€): " + visualizarUnaObra.getPrecio());
+                System.out.println("|| Altura(m): " + visualizarUnaObra.getAltura());
+                System.out.println("|| Peso(t): " + visualizarUnaObra.getPeso());
+                System.out.println("|| Número de piezas: " + visualizarUnaObra.getPiezas());
+                System.out.println("|| Descripción: " + visualizarUnaObra.getDescripcion());
+                System.out.println("|| ");
+                leer.nextLine();
+        }
+
         public void todasLasObras() {
 
                 // Aquí inicializo las obras de arte
