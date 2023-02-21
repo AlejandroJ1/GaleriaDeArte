@@ -137,4 +137,10 @@ public class Menu {
             System.out.printf("|| Precio final de venta(€): %f %n", precioFinal -= precioFinal * 0.1);
         }
     }
+
+    public static void imprimirEtiqueta(ObraDeArte etiquetas) {
+        System.out.println("|| Nombre:" + etiquetas.getNombre());
+        System.out.println("|| Autor:" + etiquetas.getAutor());
+        System.out.println("|| Descripción:" + etiquetas.getDescripcion());
+    }
 }
