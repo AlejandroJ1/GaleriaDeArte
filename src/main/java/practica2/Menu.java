@@ -13,7 +13,8 @@ public class Menu {
     }
 
     public static void main(String[] args) {
-
+        galeria.todasLasObras();
+        MenuPrincipal(galeria.getObras());
     }
 
     public Menu() {
