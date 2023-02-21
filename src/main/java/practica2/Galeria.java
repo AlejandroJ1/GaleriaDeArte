@@ -218,7 +218,7 @@ public class Galeria {
                                 + (((valorPrecioVenta.getAltura()) > 2.0) ? 100.0 : 20.0);
                 System.out.printf("|| Precio de venta(€): %f %n", precioFinal);
 
-                if (valorPrecioVenta.getTipo().equalsIgnoreCase("Pictorica")) {
+                if (valorPrecioVenta.getTipo().equalsIgnoreCase("Pintura")) {
                         System.out.println("|| Descuento(10% Pintura €): " + precioFinal * 0.1);
                         System.out.printf("|| Precio final de venta(€): %f %n", precioFinal -= precioFinal * 0.1);
                 } else if (valorPrecioVenta.getTipo().equalsIgnoreCase("Escultura")) {
