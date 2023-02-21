@@ -40,30 +40,30 @@ public class Menu {
                     case 1:
                         sc.nextLine();
                         System.out.println("Has seleccionadp la 1");
-
+                        galeria.mostrarObras();
                         sc.nextLine();
                         break;
                     case 2:
                         System.out.println("Has seleccionado la 2");
                         sc.nextLine();
-
+                        galeria.altaObraDeArte();
                         sc.nextLine();
                         break;
                     case 3:
                         System.out.println("Has seleccionado la 3");
-
+                        galeria.modificarObrasDeArte(galeria.buscarObra(obras));
                         break;
                     case 4:
                         System.out.println("Has seleccionado la 4");
-
+                        galeria.visualizarObra(galeria.buscarObra(obras));
                         break;
                     case 5:
                         System.out.println("Has seleccionado la 5");
-
+                        galeria.precioVenta(galeria.buscarObra(obras));
                         break;
                     case 6:
                         System.out.println("Has seleccionado la 6");
-
+                        galeria.imprimirEtiqueta(galeria.buscarObra(obras));
                         break;
                     case 0:
                         System.out.println(finalizar);
@@ -107,40 +107,4 @@ public class Menu {
         return obras;
     }
 
-    public static void precioVenta(ObraDeArte valorPrecioVenta) {
-        double precioFinal = 0;
-        System.out.println("||                 -=>OBRA Nº " + valorPrecioVenta.getId() + "<=-");
-        System.out.println("|| Nombre: " + valorPrecioVenta.getNombre());
-        System.out.println("|| Altura(m): " + valorPrecioVenta.getAltura());
-        System.out.println("|| Peso(t): " + valorPrecioVenta.getPeso());
-        System.out.println("|| Número de piezas: " + valorPrecioVenta.getPiezas());
-        System.out.println("|| Precio(€): " + valorPrecioVenta.getPrecio());
-        System.out.println("|| Comisión Galería(€): " + valorPrecioVenta.getPrecio() * 0.25);
-        System.out.printf("|| Importe por peso(€): %f %n", ((valorPrecioVenta.getPeso()) > 1.0) ? 100.0 : 20.0);
-        System.out.printf("|| Importe por altura(€): %f %n", ((valorPrecioVenta.getAltura()) > 2.0) ? 100.0 : 20.0);
-        if (valorPrecioVenta.getPiezas() > 2) {
-            for (int i = 2; i < valorPrecioVenta.getPiezas(); i++) {
-                System.out.printf("|| Importe adicional - pieza %d (€): %f %n", i + 1, 10.0);
-                precioFinal += 10.0;
-            }
-        }
-        precioFinal = (valorPrecioVenta.getPrecio()) + (valorPrecioVenta.getPrecio() * 0.25)
-                + (((valorPrecioVenta.getPeso()) > 1.0) ? 100.0 : 20.0)
-                + (((valorPrecioVenta.getAltura()) > 2.0) ? 100.0 : 20.0);
-        System.out.printf("|| Precio de venta(€): %f %n", precioFinal);
-
-        if (valorPrecioVenta.getTipo().equalsIgnoreCase("Pictorica")) {
-            System.out.println("|| Descuento(10% Pintura €): " + precioFinal * 0.1);
-            System.out.printf("|| Precio final de venta(€): %f %n", precioFinal -= precioFinal * 0.1);
-        } else if (valorPrecioVenta.getTipo().equalsIgnoreCase("Escultura")) {
-            System.out.println("|| Descuento(20% Escultura €) + (Sobrecoste 50€): " + precioFinal * 0.2 + 50.00);
-            System.out.printf("|| Precio final de venta(€): %f %n", precioFinal -= precioFinal * 0.1);
-        }
-    }
-
-    public static void imprimirEtiqueta(ObraDeArte etiquetas) {
-        System.out.println("|| Nombre:" + etiquetas.getNombre());
-        System.out.println("|| Autor:" + etiquetas.getAutor());
-        System.out.println("|| Descripción:" + etiquetas.getDescripcion());
-    }
 }
