@@ -40,18 +40,18 @@ public class Menu {
                     case 1:
                         sc.nextLine();
                         System.out.println("Has seleccionadp la 1");
-                        
+
                         sc.nextLine();
                         break;
                     case 2:
                         System.out.println("Has seleccionado la 2");
                         sc.nextLine();
-                        
+
                         sc.nextLine();
                         break;
                     case 3:
                         System.out.println("Has seleccionado la 3");
-                        
+
                         break;
                     case 4:
                         System.out.println("Has seleccionado la 4");
@@ -59,7 +59,7 @@ public class Menu {
                         break;
                     case 5:
                         System.out.println("Has seleccionado la 5");
-                        
+
                         break;
                     case 6:
                         System.out.println("Has seleccionado la 6");
@@ -76,7 +76,7 @@ public class Menu {
                 sc.next();
             }
             System.out.println("¡¡Gracias por usar esta aplicación!!");
-           
+
         }
 
     }
