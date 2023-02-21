@@ -31,7 +31,7 @@ public class Galeria {
         return obras;
     }
 
-    public void MostrarObras() {
+    public void mostrarObras() {
         System.out.printf("%-7s %-22s %-11s %-9s %-9s %-6s %-12s %s%n",
                 "id", "Nombre", "Autor", "Precio", "Altura", "Peso", "Piezas", "Descripcion");
         for (int i = 0; i < this.obras.length; i++) {
@@ -40,6 +40,60 @@ public class Galeria {
                     this.obras[i].getPrecio(), this.obras[i].getAltura(), this.obras[i].getPeso(),
                     this.obras[i].getPiezas(), this.obras[i].getDescripcion());
         }
+    }
+
+    public void altaObraDeArte() {
+        ObraDeArte obra;
+        int opcion;
+
+        System.out.println("¿Qué tipo de obra de arte desea dar de alta?");
+        System.out.println("1. Pintura");
+        System.out.println("2. Escultura");
+        opcion = leer.nextInt();
+
+        leer.nextLine();
+
+        System.out.println("Introduzca el id de la obra.");
+        int id = leer.nextInt();
+
+        leer.nextLine();
+
+        System.out.println("Introduzca el nombre de la obra.");
+        String nombre = leer.nextLine();
+
+        System.out.println("Introduzca el autor de la obra.");
+        String autor = leer.nextLine();
+
+        System.out.println("Introduzca el precio de la obra.");
+        double precio = leer.nextDouble();
+
+        System.out.println("Introduzca la altura de la obra.");
+        double altura = leer.nextDouble();
+
+        System.out.println("Introduzca el peso de la obra.");
+        double peso = leer.nextDouble();
+
+        System.out.println("Introduzca el número de piezas de la obra.");
+        int piezas = leer.nextInt();
+
+        leer.nextLine();
+        System.out.println("Introduzca una descripción de la obra.");
+        String descripcion = leer.nextLine();
+
+        if (opcion == 1) {
+            System.out.println("Introduzca la técnica de la obra.");
+            String tecnica = leer.nextLine();
+            obra = new Pintura(id, nombre, autor, precio, altura, peso, piezas, descripcion, tecnica);
+        } else {
+            System.out.println("Introduzca el material de la obra.");
+            String material = leer.nextLine();
+            obra = new Escultura(id, nombre, autor, precio, altura, peso, piezas, descripcion, material);
+        }
+
+        obras = Arrays.copyOf(obras, obras.length + 1); // Añadir un espacio al array
+        obras[obras.length - 1] = obra; // Agregar la nueva obra al final del array
+
+        System.out.println("La obra de arte se ha dado de alta correctamente.");
     }
 
     public void todasLasObras() {
