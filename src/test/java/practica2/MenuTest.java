@@ -6,19 +6,19 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MenuTest {
-    Escultura escultura1;
-    Pintura pintura1;
+    ObraDeArte obra1;
+    ObraDeArte obra2;
 
     @BeforeEach
     void crearObjeto() {
-        pintura1 = new Pintura(1, "nombre:pintura", "Antonio", 1.0, 3.0, 2.0, 1, "Primera pintura", "Oleo");
-        escultura1 = new Escultura(2, "nombre_escultura", "Alejandro", 1.0, 2.0, 3.0, 1, "Escultura barroca", "Cobre");
+        obra1 = new ObraDeArte(1, "nombre_pintura", "Antonio","Pintura", 1.0, 3.0, 2.0, 1, "Primera pintura");
+        obra2 = new ObraDeArte(2, "nombre_escultura", "Alejandro","Pintura", 1.0, 2.0, 3.0, 1, "Escultura barroca");
     }
 
     @AfterEach
     void borrarObjeto() {
-        pintura1 = null;
-        escultura1 = null;
+        obra1 = null;
+        obra2 = null;
     }
 
     
