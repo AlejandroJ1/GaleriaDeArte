@@ -14,9 +14,9 @@ public class Escultura extends ObraDeArte {
         this.material = material;
     }
 
-    public Escultura(int id, String nombre, String autor, double precio, double altura, double peso,
+    public Escultura(String nombre, String autor, double precio, double altura, double peso,
             int piezas, String descripcion, String material) {
-        super(id, nombre, autor, precio, altura, peso, piezas, descripcion);
+        super(nombre, autor, precio, altura, peso, piezas, descripcion);
         this.material = material;
     }
 

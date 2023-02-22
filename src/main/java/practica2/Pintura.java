@@ -14,9 +14,9 @@ public class Pintura extends ObraDeArte {
         this.tecnica = tecnica;
     }
 
-    public Pintura(int id, String nombre, String autor, double precio, double altura, double peso,
+    public Pintura(String nombre, String autor, double precio, double altura, double peso,
             int piezas, String descripcion, String tecnica) {
-        super(id, nombre, autor, precio, altura, peso, piezas, descripcion);
+        super(nombre, autor, precio, altura, peso, piezas, descripcion);
         this.tecnica = tecnica;
     }
 

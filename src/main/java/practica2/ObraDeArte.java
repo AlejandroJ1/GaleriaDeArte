@@ -29,9 +29,8 @@ public class ObraDeArte {
         this.descripcion = descripcion;
     }
 
-    public ObraDeArte(int id, String nombre, String autor, double precio, double altura, double peso,
+    public ObraDeArte(String nombre, String autor, double precio, double altura, double peso,
             int piezas, String descripcion) {
-        this.id = id;
         this.nombre = nombre;
         this.autor = autor;
         this.precio = precio;
