@@ -132,7 +132,7 @@ public class Galeria {
                                         case 3:
                                                 leer.nextLine();
                                                 System.out.println("Introduzca el nuevo tipo de obra:");
-                                                caracteristicas.setSTipo(menu.preguntarTipo());
+                                                caracteristicas.setSeleccionarTipo(menu.preguntarTipo());
                                                 break;
 
                                         case 4:

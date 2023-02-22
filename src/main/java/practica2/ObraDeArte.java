@@ -73,7 +73,7 @@ public class ObraDeArte {
         this.tipo = tipo;
     }
 
-    public void setSTipo(int tipo) {
+    public void setSeleccionarTipo(int tipo) {
         this.tipo = seleccionarTipo[tipo - 1];
     }
 

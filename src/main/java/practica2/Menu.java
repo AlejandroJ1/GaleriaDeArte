@@ -12,16 +12,16 @@ public class Menu {
         this.leer = leer;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         galeria.todasLasObras();
-        MenuPrincipal(galeria.getObras());
+        menuPrincipal(galeria.getObras());
     }
 
     public Menu() {
 
     }
 
-    public static void MenuPrincipal(ObraDeArte[] obras) {
+    public static void menuPrincipal(ObraDeArte[] obras) {
 
         int opcion;
         boolean finalizar = false;
@@ -86,7 +86,7 @@ public class Menu {
         System.out.println("||==========================================||");
         System.out.println("||    Elige un tipo para la obra.           ||");
         System.out.println("||                                          ||");
-        System.out.println("||    1 --> Pictorica.                      ||");
+        System.out.println("||    1 --> Pintura.                        ||");
         System.out.println("||    2 --> Escultura .                     ||");
         System.out.println("||==========================================||");
         int obras = leer.nextInt();
@@ -106,6 +106,10 @@ public class Menu {
         System.out.println("(0)Atras");
         int obras = leer.nextInt();
         return obras;
+    }
+
+    public static Object preguntarTipo(int id, ObraDeArte[] todo) {
+        return null;
     }
 
 }
