@@ -11,8 +11,8 @@ public class EsculturaTest {
 
     @BeforeEach
     void crearObjeto() {
-        escultura1 = new Escultura(1, "nombre1", "Antonio","Escultura", 1.0, 3.0, 2.0, 1, "Oleo Antonio","Hierro");
-        escultura2 = new Escultura(2, "nombre2", "Alejandro","Escultura", 1.0, 2.0, 3.0, 1, "Acuarela alejandro","Acero");
+        escultura1 = new Escultura(1, "nombre_escultura1", "Antonio","Escultura", 1.0, 3.0, 2.0, 1, "Oleo Antonio","Hierro");
+        escultura2 = new Escultura(2, "nombre_escultura2", "Alejandro","Escultura", 1.0, 2.0, 3.0, 1, "Acuarela alejandro","Acero");
     }
 
     @AfterEach

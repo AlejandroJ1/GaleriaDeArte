@@ -11,8 +11,8 @@ public class PinturaTest {
 
     @BeforeEach
     void crearObjeto() {
-        pintura1 = new Pintura(1, "nombre_pintura", "Antonio","Pintura", 1.0, 3.0, 2.0, 1, "Oleo Antonio","Oleo");
-        pintura2 = new Pintura(2, "nombre_escultura", "Alejandro","Pintura", 1.0, 2.0, 3.0, 1, "Acuarela alejandro","Acuarela");
+        pintura1 = new Pintura(1, "nombre_pintura1", "Antonio","Pintura", 1.0, 3.0, 2.0, 1, "Oleo Antonio","Oleo");
+        pintura2 = new Pintura(2, "nombre_pintura2", "Alejandro","Pintura", 1.0, 2.0, 3.0, 1, "Acuarela alejandro","Acuarela");
     }
 
     @AfterEach

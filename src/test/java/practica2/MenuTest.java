@@ -11,8 +11,8 @@ public class MenuTest {
 
     @BeforeEach
     void crearObjeto() {
-        obra1 = new ObraDeArte(1, "nombre_pintura", "Antonio","Pintura", 1.0, 3.0, 2.0, 1, "Primera pintura");
-        obra2 = new ObraDeArte(2, "nombre_escultura", "Alejandro","Pintura", 1.0, 2.0, 3.0, 1, "Escultura barroca");
+        obra1 = new ObraDeArte(1, "nombre_obra1", "Antonio","Pintura", 1.0, 3.0, 2.0, 1, "Primera pintura");
+        obra2 = new ObraDeArte(2, "nombre_obra2", "Alejandro","Pintura", 1.0, 2.0, 3.0, 1, "Escultura barroca");
     }
 
     @AfterEach
